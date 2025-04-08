@@ -3,7 +3,7 @@
 let
 	username = "typovrak";
 	group = config.users.users.${username}.group or "users";
-	home = config.users.users.home;
+	home = config.users.users.${username}.home;
 in {
 	system.activationScripts.alacritty = ''
 		mkdir -p ${home}/.config/alacritty
